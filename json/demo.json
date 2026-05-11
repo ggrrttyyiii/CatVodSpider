@@ -139,11 +139,11 @@
       }
     },
     {
-      "key": "花猪",
-      "name": "🐷标清┃1080P",
+      "key": "葫芦",
+      "name": "🪽葫芦┃1080P",
       "type": 3,
       "api": "csp_AppGet",
-      "ext": "https://c0nfb829mg2ds3z6x28fb1hjs7euh9vd.68.gy:7865|g68kj3fdh3c23t98"
+      "ext": "https://mobile-1251126973.cos.ap-guangzhou.myqcloud.com/maccos_config.txt|8R33VQSxzmCaHpEX|V122|okhttp/3.10.0"
     },
     {
       "key": "新首发",
@@ -152,9 +152,16 @@
       "api": "csp_AppGet",
       "ext": "https://yun-1316442804.cos.ap-guangzhou.myqcloud.com/600.txt|FTgP4Gq8zPiqbt7M|V122|okhttp/3.10.0"
     },
-    {
+     {
       "key": "四叶草",
-      "name": "🍀 标清┃1080P",
+      "name": "🍀幸运┃1080P",
+      "type": 3,
+      "api": "csp_AppGet",
+      "ext": "https://yzysap.oss-cn-hangzhou.aliyuncs.com/sss.txt|wNCwbXzr0Bm6cS2C|V122|okhttp/3.10.0"
+    },
+    {
+      "key": "猪猪",
+      "name": "🐷猪猪┃1080P",
       "type": 3,
       "api": "csp_AppGet",
       "ext": "https://qj4.catbb.xyz|eecbio48dsq13kkk|V122|okhttp/3.10.0"

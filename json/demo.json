@@ -177,7 +177,8 @@
 			"name": "🍅大鹅┃1080P",
 			"type": 3,
 			"timeout": 15,
-			"api": "csp_App3Q"
+			"api": "csp_App3Q",
+			"ext":"https://bubuzhuiju.com",
 		},
 		{
 			"key": "csp_SaoHuo",

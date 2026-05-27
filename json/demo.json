@@ -233,7 +233,7 @@
             "type": 3,
             "api": "csp_App99",
             "ext": {
-                "host": "http://124.221.3.182:19987/app/bn",
+                "host": "http://124.221.3.182:19987",
                 "appkey": "d1f0c269eab74d93821fffc9befdbbba",
                 "versionName": "1.2.0",
                 "name": "剧圈圈",
@@ -248,7 +248,7 @@
             "type": 3,
             "api": "csp_App99",
             "ext": {
-                "host": "http://117.50.200.113:19987/app/bn",
+                "host": "http://117.50.200.113:19987",
                 "LoginPath": "/app/log",
                 "appkey": "040f9b1bc5e942569b5c3e63943306ab",
                 "versionName": "4.3.1",

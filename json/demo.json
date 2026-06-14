@@ -233,6 +233,7 @@
 			"api": "csp_App99",
 			"ext": {
 				"host": "http://99app.appttt.cn/api",
+				"LoginPath": "/app/log",
                 "appkey": "835013444649af6d88aca7bdf1846e56",
                 "versionName": "2.0.0",
                 "name": "YIYI影视",

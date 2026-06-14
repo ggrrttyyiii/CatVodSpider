@@ -226,22 +226,6 @@
 				"buildSignature": "03DD38CE4C3D62D0F0DEFACC06768D14EB382C7BD77A05B2EBF4D66E154A0D47"
 			}
 		},
-		{
-			"key": "追番达人99",
-			"name": "🐎追番┃1080P",
-			"type": 3,
-			"api": "csp_App99",
-			"ext": {
-				"host": "http://99app.appttt.cn/api",
-				"LoginPath": "/app/log",
-                "appkey": "835013444649af6d88aca7bdf1846e56",
-                "versionName": "2.0.0",
-                "name": "YIYI影视",
-                "package": "com.yingfu.mobile.android.yiyiys",
-                "buildNumber": "2001",
-                "buildSignature": "CBDA00CF3F8921712231DA40AE69E446487CF4238D9EA976C6B4A729DA7F0995"
-			}
-		},
         {
             "key": "剧圈99",
             "name": "🫎剧圈丨APP",

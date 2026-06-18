@@ -31,7 +31,7 @@
         },
         {
             "key": "csp_Netfixtv",
-            "name": "🚀臻臻┃网盘4K",
+            "name": "🚀🚀臻臻┃网盘4K",
             "type": 3,
             "changeable": "0",
             "quickSearch": 1,
@@ -42,7 +42,7 @@
         },
         {
             "key": "csp_Netfixtv2",
-            "name": "🛸指南┃网盘4K",
+            "name": "🚀🛸指南┃网盘4K",
             "type": 3,
             "changeable": "0",
             "quickSearch": 1,
@@ -146,7 +146,7 @@
             "timeout": 12,
             "searchable": 1,
             "ext": {
-                "json": "https://cik07-cos.7moor-fs2.com/im/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/50e4430df0b5644f/bilibil.json",
+                "json": "https://cik07-cos.7moor-fs2.com/im/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/db3b02559ec04736/bili.json",
                 "cookie": ""
             },
             "style": {
@@ -193,10 +193,25 @@
             "ext": "https://asd123sx23xdacsx.top"
         },
         {
+            "key": "山楂",
+            "name": "🔴山楂┃1080P",
+            "type": 3,
+            "timeout": 15,
+            "api": "  https://cdn2.wemiaow.com/20260618162225-14-ST6qyN.py",
+            "ext": ""
+        },
+        {
             "key": "csp_SaoHuo",
             "name": "🔥火火┃1080P",
             "type": 3,
             "api": "csp_SaoHuo"
+        },
+        {
+            "key": "csp_Czsapp",
+            "name": "🏭厂长┃影视",
+            "type": 3,
+            "api": "csp_Czsapp",
+            "ext": "https://www.4kcz.com"
         },
         {
             "key": "麦田",
@@ -240,7 +255,7 @@
         },
         {
             "key": "剧圈99",
-            "name": "🫎剧圈丨APP",
+            "name": "🫎剧圈丨1080P",
             "type": 3,
             "api": "csp_App99",
             "ext": {
@@ -255,7 +270,7 @@
         },
         {
             "key": "顾我99",
-            "name": "🖼️顾我丨APP",
+            "name": "🖼️顾我丨1080P",
             "type": 3,
             "api": "csp_App99",
             "ext": {

@@ -1,0 +1,111 @@
+name: 📦 JAR 优化工作流
+
+on:
+  push:
+    paths:
+      - 'jar/**/*.jar'
+      - 'scripts/slim-jar.sh'
+  workflow_dispatch:
+
+jobs:
+  slim-jar:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 检出代码
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      
+      - name: 🔧 设置环境
+        run: |
+          # 确保脚本有执行权限
+          chmod +x scripts/slim-jar.sh
+          # 安装必要工具
+          sudo apt-get update
+          sudo apt-get install -y zip unzip
+      
+      - name: 📊 列出JAR文件
+        run: |
+          echo "📁 当前JAR文件:"
+          ls -lh jar/*.jar || echo "没有找到JAR文件"
+      
+      - name: ⚙️ 运行精简脚本
+        run: |
+          cd jar
+          for jar_file in *.jar; do
+            if [ -f "$jar_file" ]; then
+              echo "🔄 正在处理: $jar_file"
+              ../scripts/slim-jar.sh "$jar_file" "${jar_file%.jar}-slim.jar"
+              echo ""
+            fi
+          done
+      
+      - name: 📋 生成优化报告
+        id: report
+        run: |
+          echo "## 📦 JAR 优化报告" > report.md
+          echo "" >> report.md
+          echo "### 优化结果" >> report.md
+          echo "" >> report.md
+          cd jar
+          
+          for slim_jar in *-slim.jar; do
+            if [ -f "$slim_jar" ]; then
+              original_jar="${slim_jar%-slim.jar}.jar"
+              if [ -f "$original_jar" ]; then
+                original_size=$(du -h "$original_jar" | cut -f1)
+                original_bytes=$(stat -c%s "$original_jar")
+                slim_size=$(du -h "$slim_jar" | cut -f1)
+                slim_bytes=$(stat -c%s "$slim_jar")
+                saved_bytes=$((original_bytes - slim_bytes))
+                reduction_percent=$((saved_bytes * 100 / original_bytes))
+                
+                echo "| 文件 | 原始大小 | 精简后 | 节省 | 压缩率 |" >> ../report.md
+                echo "|------|---------|--------|------|--------|" >> ../report.md
+                echo "| $original_jar | $original_size | $slim_size | $saved_bytes B | $reduction_percent% |" >> ../report.md
+                echo "" >> ../report.md
+              fi
+            fi
+          done
+          
+          echo "### 文件列表" >> ../report.md
+          echo "" >> ../report.md
+          echo "\`\`\`" >> ../report.md
+          ls -lh *.jar >> ../report.md
+          echo "\`\`\`" >> ../report.md
+      
+      - name: 📤 上传优化报告
+        uses: actions/upload-artifact@v3
+        with:
+          name: jar-optimization-report
+          path: report.md
+      
+      - name: 💾 提交精简JAR
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          
+          # 检查是否有变更
+          if git diff --quiet; then
+            echo "✅ 没有新的精简JAR，跳过提交"
+          else
+            echo "📝 提交优化后的JAR文件..."
+            git add jar/*-slim.jar
+            git commit -m "🤖 自动优化: 生成精简JAR文件
+
+- 移除Maven元数据
+- 删除文档和示例
+- 使用最大压缩率重新打包
+- CI/CD自动生成 (GitHub Actions)" || echo "没有变更需要提交"
+            git push || echo "推送失败，可能没有新变更"
+          fi
+      
+      - name: ✅ 显示最终结果
+        run: |
+          echo "🎉 JAR优化完成！"
+          echo ""
+          echo "📊 最终文件列表:"
+          ls -lh jar/*.jar
+          echo ""
+          cat report.md

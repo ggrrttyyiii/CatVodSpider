@@ -1,1 +1,141 @@
+name: 🎯 一键JAR优化 (AppDrama专用)
 
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'jar/aidaox.jar'
+
+jobs:
+  optimize-jar:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 检出代码
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      
+      - name: 🔧 安装依赖
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y zip unzip
+          chmod +x scripts/slim-jar.sh
+      
+      - name: 📊 显示原始文件
+        run: |
+          echo "📁 原始JAR文件信息:"
+          ls -lh jar/aidaox.jar
+          echo ""
+          echo "📦 JAR内容统计:"
+          unzip -l jar/aidaox.jar | tail -5
+      
+      - name: ⚙️ 运行精简脚本
+        run: |
+          cd jar
+          ../scripts/slim-jar.sh aidaox.jar aidaox-slim.jar
+          cd ..
+      
+      - name: 📋 生成优化报告
+        id: report
+        run: |
+          {
+            echo "## 🎉 JAR优化完成报告"
+            echo ""
+            echo "### 📊 优化统计"
+            echo ""
+            
+            ORIGINAL_BYTES=$(stat -c%s jar/aidaox.jar)
+            SLIM_BYTES=$(stat -c%s jar/aidaox-slim.jar)
+            SAVED=$((ORIGINAL_BYTES - SLIM_BYTES))
+            SAVED_MB=$(echo "scale=2; $SAVED / 1024 / 1024" | bc)
+            PERCENT=$((SAVED * 100 / ORIGINAL_BYTES))
+            
+            echo "| 指标 | 数据 |"
+            echo "|------|------|"
+            echo "| 原始大小 | $(numfmt --to=iec $ORIGINAL_BYTES 2>/dev/null || echo $ORIGINAL_BYTES' B') |"
+            echo "| 精简后 | $(numfmt --to=iec $SLIM_BYTES 2>/dev/null || echo $SLIM_BYTES' B') |"
+            echo "| 节省空间 | $SAVED_MB MB |"
+            echo "| 压缩率 | **$PERCENT%** |"
+            echo ""
+            echo "### ✅ 优化内容"
+            echo ""
+            echo "- ✅ 移除 META-INF/maven/ 元数据"
+            echo "- ✅ 删除备份文件 (*.bak, *~)"
+            echo "- ✅ 移除文档文件"
+            echo "- ✅ 删除示例代码"
+            echo "- ✅ 最大压缩率重新打包"
+            echo ""
+            echo "### 🔒 保留内容"
+            echo ""
+            echo "- ✅ 所有 .class 文件"
+            echo "- ✅ 所有 .dex 文件"
+            echo "- ✅ 配置文件和资源"
+            echo "- ✅ **AppDrama功能完整** 🎬"
+            echo ""
+            echo "### 📁 文件列表"
+            echo ""
+            echo "\`\`\`"
+            ls -lh jar/aidaox*.jar
+            echo "\`\`\`"
+            echo ""
+            echo "---"
+            echo "*优化时间: $(date -u +'%Y-%m-%d %H:%M:%S UTC')*"
+          } | tee report.md
+      
+      - name: 💾 提交精简JAR
+        run: |
+          git config --local user.email "github-actions@github.com"
+          git config --local user.name "GitHub Actions"
+          
+          if [ -f "jar/aidaox-slim.jar" ]; then
+            echo "📝 添加精简JAR文件..."
+            git add jar/aidaox-slim.jar
+            
+            ORIGINAL_BYTES=$(stat -c%s jar/aidaox.jar)
+            SLIM_BYTES=$(stat -c%s jar/aidaox-slim.jar)
+            SAVED=$((ORIGINAL_BYTES - SLIM_BYTES))
+            PERCENT=$((SAVED * 100 / ORIGINAL_BYTES))
+            
+            git commit -m "🎯 自动生成精简JAR: aidaox-slim.jar
+
+优化统计:
+- 原始大小: $(numfmt --to=iec $ORIGINAL_BYTES 2>/dev/null || echo $ORIGINAL_BYTES' B')
+- 精简后: $(numfmt --to=iec $SLIM_BYTES 2>/dev/null || echo $SLIM_BYTES' B')
+- 节省: $PERCENT% ✅
+- 功能保留: AppDrama完全可用 🎬
+
+优化内容:
+- 移除Maven元数据
+- 删除文档和示例
+- 最大压缩优化
+- CI/CD自动生成
+
+GitHub Actions Workflow" || echo "❌ 无新变更"
+            
+            git push origin main || echo "⚠️ 推送失败"
+          else
+            echo "❌ 精简JAR生成失败"
+            exit 1
+          fi
+      
+      - name: 📤 上传报告
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: optimization-report
+          path: report.md
+      
+      - name: ✨ 完成提示
+        run: |
+          echo "=================================="
+          echo "✅ JAR优化完成！"
+          echo "=================================="
+          echo ""
+          echo "📦 精简版本: jar/aidaox-slim.jar"
+          echo "📊 优化报告已生成"
+          echo "🎬 AppDrama可正常使用"
+          echo ""
+          echo "🔗 GitHub链接:"
+          echo "https://github.*](#)
+

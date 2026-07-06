@@ -172,14 +172,14 @@
 			"api": "csp_AppGet",
 			"ext": "https://yzysap.oss-cn-hangzhou.aliyuncs.com/kkk.txt|8eeObuwrmS3lRDEs|V122|okhttp/3.10.0"
 		},
-		{
+			{
 			"key": "爱营",
 			"name": "💥爱影┃1080P",
 			"type": 3,
 			"searchable": 1,
 			"changeable": 1,
 			"api": "csp_AppGet",
-			"ext": "https://aysappto.oss-cn-chengdu.aliyuncs.com/q23.txt|t8eeObuwrmS3lRDE|V122|okhttp/3.10.0"
+			"ext": "https://aysappto.oss-cn-chengdu.aliyuncs.com/q23.txt|nzEqOgYk3QzHuEP8|V122|okhttp/3.10.0"
 		},
 		{
 			"key": "3QQQ",

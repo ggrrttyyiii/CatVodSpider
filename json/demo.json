@@ -11,7 +11,7 @@
 	}],
 	"sites": [{
 			"key": "豆豆",
-			"name": "🎬豆瓣┃精选 仅供测试 端午快乐 备用：https://zzzy.shop/tv/",
+			"name": "🎬豆瓣┃精选 仅供测试 明天修短剧 备用：https://zzzy.shop/tv/",
 			"type": 3,
 			"quickSearch": 0,
 			"filterable": 1,
@@ -165,14 +165,14 @@
 			"api": "csp_AppGet",
 			"ext": "https://yun-1316442804.cos.ap-guangzhou.myqcloud.com/601.txt|FTgP4Gq8zPiqbt7M|V122|okhttp/3.10.0"
 		},
-			{
+		{
 			"key": "四叶草",
 			"name": "🍀幸运┃1080P",
 			"type": 3,
 			"api": "csp_AppGet",
-			"ext": "https://yzysap.oss-cn-hangzhou.aliyuncs.com/kkk.txt|8eeObuwrmS3lRDEs|V122|okhttp/3.10.0"
+			"ext": "https://yzysap.oss-cn-hangzhou.aliyuncs.com/sss.txt|wNCwbXzr0Bm6cS2C|V122|okhttp/3.10.0"
 		},
-			{
+		{
 			"key": "爱营",
 			"name": "💥爱影┃1080P",
 			"type": 3,

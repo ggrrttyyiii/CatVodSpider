@@ -165,12 +165,12 @@
 			"api": "csp_AppGet",
 			"ext": "https://yun-1316442804.cos.ap-guangzhou.myqcloud.com/601.txt|FTgP4Gq8zPiqbt7M|V122|okhttp/3.10.0"
 		},
-		{
+			{
 			"key": "四叶草",
 			"name": "🍀幸运┃1080P",
 			"type": 3,
 			"api": "csp_AppGet",
-			"ext": "https://yzysap.oss-cn-hangzhou.aliyuncs.com/kkk.txt|t8eeObuwrmS3lRD|V122|okhttp/3.10.0"
+			"ext": "https://yzysap.oss-cn-hangzhou.aliyuncs.com/kkk.txt|8eeObuwrmS3lRDEs|V122|okhttp/3.10.0"
 		},
 		{
 			"key": "爱营",

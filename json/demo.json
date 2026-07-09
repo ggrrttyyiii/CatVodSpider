@@ -322,7 +322,8 @@
 			"name": "🔥短剧2┃1080P",
 			"type": 3,
 			"timeout": 12,
-			"api": "csp_AppXY"
+			"api": "csp_AppXY",
+			"ext":""
 		},
 		{
 			"key": "csp_APPTe",

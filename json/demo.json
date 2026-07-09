@@ -189,7 +189,8 @@
 			"timeout": 12,
 			"searchable": 1,
 			"quickSearch": 0,
-			"api": "csp_FengYe"
+			"api": "csp_FengYe",
+			"ext":"https://www.vip1949.com"
 		},
 
 		{

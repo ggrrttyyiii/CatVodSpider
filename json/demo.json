@@ -183,17 +183,6 @@
 			"api": "csp_SaoHuo"
 		},
 		{
-			"key": "csp_FengYe",
-			"name": "🍁枫叶┃1080P",
-			"type": 3,
-			"timeout": 12,
-			"searchable": 1,
-			"quickSearch": 0,
-			"api": "csp_FengYe",
-			"ext":"https://www.vip1949.com"
-		},
-
-		{
 			"key": "csp_Czsapp",
 			"name": "🏭厂长┃影视",
 			"type": 3,

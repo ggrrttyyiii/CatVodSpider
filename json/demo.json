@@ -1,5 +1,5 @@
 {
-	"spider": "https://s3plus.meituan.net/opapisdk/op_ticket_1_885190757_1782118073266_ZXYRUXPn.jpg;md5;d6648fd1ac553d555ea8431b8adb7c71",
+	"spider": "https://s3plus.meituan.net/opapisdk/op_ticket_1_5677168484_1783598800596_Ls2Xrxgx.jar;md5;5f850145296b17847eb5306865f90b32",
 	"wallpaper": "https://www.wexwp.cc/bizhi.php",
 	"logo": "https://wkphoto.bj.bcebos.com/bba1cd11728b47106798119ad3cec3fdfc032335.jpg",
 	"lives": [{
@@ -11,7 +11,7 @@
 	}],
 	"sites": [{
 			"key": "豆豆",
-			"name": "🎬豆瓣┃精选 仅供测试 端午快乐 备用：https://zzzy.shop/tv/",
+			"name": "🎬豆瓣┃精选 仅供测试  备用：https://zzzy.shop/tv/",
 			"type": 3,
 			"quickSearch": 0,
 			"filterable": 1,
@@ -52,7 +52,7 @@
 			"key": "csp_Wogg",
 			"name": "🧸玩偶┃网盘4K",
 			"type": 3,
-			"api": "csp_Wogg",
+			"api": "csp_Gege",
 			"timeout": 15,
 			"changeable": "0",
 			"quickSearch": 1,
@@ -87,20 +87,6 @@
 			"api": "csp_Wwys",
 			"timeout": 12,
 			"ext": "https://vip.wwgz.cn:5200"
-		},
-		{
-			"key": "csp_Music",
-			"name": "🎵音乐┃在线",
-			"type": 3,
-			"api": "csp_Music",
-			"quickSearch": 0,
-			"timeout": 12,
-			"searchable": 0,
-			"style": {
-				"type": "rect",
-				"ratio": 1.333
-			},
-			"ext": ""
 		},
 		{
 			"key": "88看球",
@@ -152,18 +138,11 @@
 			}
 		},
 		{
-			"key": "葫芦",
-			"name": "🪽葫芦┃1080P",
-			"type": 3,
-			"api": "csp_AppGet",
-			"ext": "https://mobile-1251126973.cos.ap-guangzhou.myqcloud.com/maccos_config.txt|8R33VQSxzmCaHpEX|V122|okhttp/3.10.0"
-		},
-		{
 			"key": "新首发",
 			"name": "👻标清┃1080P",
 			"type": 3,
 			"api": "csp_AppGet",
-			"ext": "https://yun-1316442804.cos.ap-guangzhou.myqcloud.com/601.txt|FTgP4Gq8zPiqbt7M|V122|okhttp/3.10.0"
+			"ext": "https://yun-1316442804.cos.ap-guangzhou.myqcloud.com/602.txt|FTgP4Gq8zPiqbt7M|V122|okhttp/3.10.0"
 		},
 		{
 			"key": "四叶草",
@@ -203,6 +182,16 @@
 			"type": 3,
 			"api": "csp_SaoHuo"
 		},
+		{
+			"key": "csp_FengYe",
+			"name": "🍁枫叶┃1080P",
+			"type": 3,
+			"timeout": 12,
+			"searchable": 1,
+			"quickSearch": 0,
+			"api": "csp_csp_FengYe"
+		},
+
 		{
 			"key": "csp_Czsapp",
 			"name": "🏭厂长┃影视",
@@ -266,48 +255,46 @@
 				"buildSignature": "5AD4436C4730FFE26910C86278B80F3E661C317FFC3616F702D20A729262624A"
 			}
 		},
-		 {
-      "key": "天堂",
-      "name": "👀天堂丨1080P",
-      "type": 3,
-	 "jar":"https://nos.netease.com/youdata-netease/public-utilUpload-a7G53vj5jfeyGFyaqz72sG.zip;md5;99c7b92e461a29895cd7003f32a57d39",
-      "api": "csp_AppDrama",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": {
-        "appName": "电影天堂",
-        "publicKey": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCduNEnfxGaLuQRk5ABzXHhPV43zi00sCHjLo8BYc+Wi6xXm2b4v0i28Sq4WlNCKhseft9fz8kO/qLr6/022o1RcuOU7e4GFL3U9WnNODwRBYSYWd+K8nqpI/tAUDmZEBGRWqjrc7x6aMl3A+xpnWkLbPCLsuhbuuUE3tv09oeOpwIDAQAB",
-        "dataKey": "D2KREWRIBVNAUJJYEDL4VFHOY2Q0PQ==",
-        "dataIv": "OC1A06E197EF10CF3F6058CA7A803B5E",
-        "pkg": "com.dytiantang.one",
-        "host": "",
-        "site": "https://dyttandroid04-1372779881.cos.ap-shanghai.myqcloud.com/app_dyttandroid.txt",
-        "version": "3.0.0.7",
-        "decrypt": "0"
-      }
-    },
-    {
-      "key": "橘汁",
-      "name": "👀橘汁丨1080P",
-      "type": 3,
-	  "jar":"https://nos.netease.com/youdata-netease/public-utilUpload-a7G53vj5jfeyGFyaqz72sG.zip;md5;99c7b92e461a29895cd7003f32a57d39",
-      "api": "csp_AppDrama",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": {
-        "appName": "橘汁",
-        "publicKey": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCr8SzZhjYy+rsya1K09t8d2K50pWFoBkgUqMpKOiW+3IEVKd4eTdvg9RSOjQ82kypL6R9BnsmrS1V8s4PVDwjQbUtYhTPPC9Hz16qY7rpD6m0d2vr09/UpWQ5uOy9PR0QTrsioveZ+DIe9jc3C+zBCu/kZSY/R8stwJoiitki3gwIDAQAB",
-        "dataKey": "DGVQRUX5R1LWWDLHTGJSUKG1DJRVPQ==",
-        "dataIv": "OC1A06E197EF10CF3F6058CA7A803B5E",
-        "pkg": "com.lxf.snzlcgtzxyx",
-        "host": "",
-        "site": "https://123-1349250429.cos.ap-shanghai.myqcloud.com/app.txt",
-        "version": "3.0.2.1",
-        "decrypt": "1"
-      }
-    },
+		{
+			"key": "天堂",
+			"name": "👀天堂丨1080P",
+			"type": 3,
+			"api": "csp_AppDrama",
+			"searchable": 1,
+			"quickSearch": 1,
+			"filterable": 1,
+			"ext": {
+				"appName": "电影天堂",
+				"publicKey": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCduNEnfxGaLuQRk5ABzXHhPV43zi00sCHjLo8BYc+Wi6xXm2b4v0i28Sq4WlNCKhseft9fz8kO/qLr6/022o1RcuOU7e4GFL3U9WnNODwRBYSYWd+K8nqpI/tAUDmZEBGRWqjrc7x6aMl3A+xpnWkLbPCLsuhbuuUE3tv09oeOpwIDAQAB",
+				"dataKey": "D2KREWRIBVNAUJJYEDL4VFHOY2Q0PQ==",
+				"dataIv": "OC1A06E197EF10CF3F6058CA7A803B5E",
+				"pkg": "com.dytiantang.one",
+				"host": "",
+				"site": "https://dyttandroid04-1372779881.cos.ap-shanghai.myqcloud.com/app_dyttandroid.txt",
+				"version": "3.0.0.7",
+				"decrypt": "0"
+			}
+		},
+		{
+			"key": "橘汁",
+			"name": "👀橘汁丨1080P",
+			"type": 3,
+			"api": "csp_AppDrama",
+			"searchable": 1,
+			"quickSearch": 1,
+			"filterable": 1,
+			"ext": {
+				"appName": "橘汁",
+				"publicKey": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCr8SzZhjYy+rsya1K09t8d2K50pWFoBkgUqMpKOiW+3IEVKd4eTdvg9RSOjQ82kypL6R9BnsmrS1V8s4PVDwjQbUtYhTPPC9Hz16qY7rpD6m0d2vr09/UpWQ5uOy9PR0QTrsioveZ+DIe9jc3C+zBCu/kZSY/R8stwJoiitki3gwIDAQAB",
+				"dataKey": "DGVQRUX5R1LWWDLHTGJSUKG1DJRVPQ==",
+				"dataIv": "OC1A06E197EF10CF3F6058CA7A803B5E",
+				"pkg": "com.lxf.snzlcgtzxyx",
+				"host": "",
+				"site": "https://123-1349250429.cos.ap-shanghai.myqcloud.com/app.txt",
+				"version": "3.0.2.1",
+				"decrypt": "1"
+			}
+		},
 		{
 			"key": "荐片",
 			"name": "🧲荐片┃1080P",
@@ -324,44 +311,29 @@
 			"ext": "https://api.ztcgi.com"
 		},
 		{
-			"key": "Huya",
-			"name": "🎮虎牙┃1080P",
-			"type": 3,
-			"jar": "https://s3plus.meituan.net/opapisdk/op_ticket_1_5677168484_1774853250308_PA5tmo8g_vip.jar;md5;a4f403a000bc5e4ebdd9da27fcb05852",
-			"api": "csp_Huya",
-			"searchable": 0,
-			"quickSearch": 0,
-			"changeable": 0,
-			"filterable": 1,
-			"timeout": 10,
-			"style": {
-				"type": "rect",
-				"ratio": 1.433
-			}
-		},
-		{
-			"key": "Douyu",
-			"name": "🎮斗鱼┃1080P",
-			"type": 3,
-			"api": "csp_Douyu",
-			"jar": "https://s3plus.meituan.net/opapisdk/op_ticket_1_5677168484_1774853250308_PA5tmo8g_vip.jar;md5;a4f403a000bc5e4ebdd9da27fcb05852",
-			"searchable": 0,
-			"quickSearch": 0,
-			"changeable": 0,
-			"filterable": 1,
-			"timeout": 10,
-			"style": {
-				"type": "rect",
-				"ratio": 1.433
-			}
-		},
-		{
 			"key": "csp_duanju",
-			"name": "🔥短剧┃1080P",
+			"name": "🔥短剧1┃1080P",
 			"type": 3,
 			"timeout": 12,
-			"api": "csp_DuanJu"
+			"api": "csp_HemaDJ"
 		},
+		{
+			"key": "csp_XY",
+			"name": "🔥短剧2┃1080P",
+			"type": 3,
+			"timeout": 12,
+			"api": "csp_AppXY"
+		},
+		{
+			"key": "csp_APPTe",
+			"name": "🍉天鹅┃1080P",
+			"type": 3,
+			"timeout": 12,
+			"searchable": 1,
+			"quickSearch": 0,
+			"api": "csp_AppTe"
+		},
+
 		{
 			"key": "csp_Gz360",
 			"name": "🍉瓜子┃1080P",

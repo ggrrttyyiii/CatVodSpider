@@ -46,7 +46,7 @@
 			"timeout": 15,
 			"api": "csp_Duopan",
 			"filterable": 1,
-			"ext": "ewogICJzaXRlX3VybHMiOiBbCiAgICAiaHR0cHM6Ly93d3cuMnhpYW9wYW4udG9wIiwKICAgICJodHRwOi8vd3d3LndleHdwLmNjIiwKICAgICJodHRwczovL3d3dy4yeGlhb3Bhbi5vbmUiLAogICAgImh0dHBzOi8vd3d3LndleHdwLmNjIgogIF0sCiAgInVybF9rZXkiOiAiVUMiLAogICJ0b2tlbiI6ICIiLAogICJ1Y0Nvb2tpZSI6ICIiLAogICJxdWFya0Nvb2tpZSI6ICIiCg=="
+			"ext": "ewogICJzaXRlX3VybHMiOiBbCiAgICAiaHR0cHM6Ly93d3cuMnhpYW9wYW4udG9wIiwKICAgICJodHRwOi8vd3d3LndleHdwLmNjIiwKICAgICJodHRwczovL3d3dy4yeGlhb3Bhbi5vbmUiLAogICAgImh0dHBzOi8vd3d3LndleHdwLmNjIgogIF0sCiAgInVybF9rZXkiOiAiVUMiLAogICJ0b2tlbiI6ICIiLAogICJ1Y0Nvb2tpZSI6ICIiLAogICJxdWFya0Nvb2tpZSI6ICIiCn0="
 		},
 		{
 			"key": "csp_Wogg",

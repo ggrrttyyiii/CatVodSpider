@@ -1,5 +1,5 @@
 {
-	"spider": "https://s3plus.meituan.net/opapisdk/op_ticket_1_5677168484_1783598800596_Ls2Xrxgx.jar;md5;5f850145296b17847eb5306865f90b32",
+	"spider": "https://qn.fqcdn.cn/666666666666666666666666/20260710173636681007-vip.jpg;md5;03b5cc34c0ac0b72c36a7c9e31a8577e",
 	"wallpaper": "https://www.wexwp.cc/bizhi.php",
 	"logo": "https://wkphoto.bj.bcebos.com/bba1cd11728b47106798119ad3cec3fdfc032335.jpg",
 	"lives": [{
@@ -182,6 +182,16 @@
 			"type": 3,
 			"api": "csp_SaoHuo"
 		},
+		{
+  "key": "枫叶影视",
+  "name": "🍁枫叶┃影视",
+  "type": 3,
+  "api": "csp_FengYe",
+  "searchable": 1,
+  "quickSearch": 1,
+  "filterable": 0,
+  "ext": "https://www.vip1949.com/"
+},
 		{
 			"key": "csp_Czsapp",
 			"name": "🏭厂长┃影视",

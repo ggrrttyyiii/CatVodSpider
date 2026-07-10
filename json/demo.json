@@ -57,7 +57,7 @@
 			"changeable": "0",
 			"quickSearch": 1,
 			"filterable": 1,
-			"ext": "CnsKICAic2l0ZV91cmxzIjogWwogICAgImh0dHBzOi8vd3d3LndvZ2cubGl2ZSIsCiAgICAiaHR0cDovL3dvZ2dwYW4ueHhvb28uY2YiLAogICAgImh0dHBzOi8vd3d3LndvZ2cubmV0IgogIF0sCiAgInRva2VuIjogIiIsCiAgInVjQ29va2llIjogIiIsCiAgInF1YXJrQ29va2llIjogIiIKfQ=="
+			"ext": "ewogICJzaXRlX3VybHMiOiBbCiAgICAiaHR0cHM6Ly93d3cud29nZy5saXZlIiwKICAgICJodHRwOi8vd29nZ3Bhbi54eG9vby5jZiIsCiAgICAiaHR0cHM6Ly93d3cud29nZy5uZXQiCiAgXSwKICAidG9rZW4iOiAiIiwKICAidWNDb29raWUiOiAiIiwKICAicXVhcmtDb29raWUiOiAiIgp9"
 		},
 		{
 			"key": "csp_Duopan",
@@ -183,15 +183,15 @@
 			"api": "csp_SaoHuo"
 		},
 		{
-  "key": "枫叶影视",
-  "name": "🍁枫叶┃影视",
-  "type": 3,
-  "api": "csp_FengYe",
-  "searchable": 1,
-  "quickSearch": 1,
-  "filterable": 0,
-  "ext": "https://www.vip1949.com/"
-},
+			"key": "枫叶影视",
+			"name": "🍁枫叶┃影视",
+			"type": 3,
+			"api": "csp_FengYe",
+			"searchable": 1,
+			"quickSearch": 1,
+			"filterable": 0,
+			"ext": "https://www.vip1949.com/"
+		},
 		{
 			"key": "csp_Czsapp",
 			"name": "🏭厂长┃影视",
@@ -323,7 +323,7 @@
 			"type": 3,
 			"timeout": 12,
 			"api": "csp_AppXY",
-			"ext":""
+			"ext": ""
 		},
 		{
 			"key": "csp_APPTe",

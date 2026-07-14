@@ -1,85 +1,95 @@
 # -*- coding: utf-8 -*-
-# by @GIMNI
-# 优化重构版本 - 提升异常处理与代码健壮性
-
-from base64 import b64decode, b64encode
-from concurrent.futures import ThreadPoolExecutor
-import hashlib
 import json
-import random
-import re
-import sys
 import time
-import urllib.parse
-from urllib.parse import parse_qs
-
-from pyquery import PyQuery as pq
+import hashlib
+import random
+from base64 import b64decode, b64encode
 import requests
-
-sys.path.append("..")
+from pyquery import PyQuery as pq
+from concurrent.futures import ThreadPoolExecutor
 from base.spider import Spider
 
-
 class Spider(Spider):
-
     def init(self, extend=""):
         self.bili_wbi_keys = None
         self.bili_wbi_expire = 0
-        self.bili_areas = []
+        # 1. 集中维护分类映射
+        # v 为自定义标记，后续通过映射表转为各平台真实的 API 参数
+        self.hot_cate_map = [
+            {'n': '英雄联盟', 'v': 'lol'},
+            {'n': '无畏契约', 'v': 'valorant'},
+            {'n': '舞蹈', 'v': 'dance'},
+            {'n': '户外', 'v': 'outdoor'}
+        ]
 
     def getName(self):
-        return "直播"
+        return "直播聚合"
 
-    def isVideoFormat(self, url):
-        pass
+    def homeContent(self, filter):
+        classes = [
+            {'type_name': '虎牙', 'type_id': 'huya'},
+            {'type_name': '斗鱼', 'type_id': 'douyu'},
+            {'type_name': 'B站', 'type_id': 'bili'}
+        ]
+        
+        # 2. 将热门分类自动注入到所有平台的筛选器
+        filters = {
+            'huya': [{'key': 'cate', 'name': '热门分类', 'value': self.hot_cate_map}],
+            'douyu': [{'key': 'cate', 'name': '热门分类', 'value': self.hot_cate_map}],
+            'bili': [{'key': 'cate', 'name': '热门分类', 'value': self.hot_cate_map}]
+        }
+        
+        return {'class': classes, 'filters': filters}
 
-    def manualVideoCheck(self):
-        pass
+    # 3. 映射逻辑：将自定义分类转换为各平台的真实 ID
+    def get_real_id(self, platform, cate_slug):
+        mapping = {
+            'lol': {'huya': '1', 'douyu': '1', 'bili': '2'},
+            'valorant': {'huya': '2', 'douyu': '2', 'bili': '3'},
+            'dance': {'huya': '8', 'douyu': '103', 'bili': '10'},
+            'outdoor': {'huya': '8', 'douyu': '105', 'bili': '11'}
+        }
+        return mapping.get(cate_slug, {}).get(platform, '0')
 
-    def destroy(self):
-        pass
+    def categoryContent(self, tid, pg, filter, extend):
+        vdata = []
+        # 处理分类跳转
+        cate_slug = extend.get('cate', '')
+        if cate_slug:
+            real_id = self.get_real_id(tid, cate_slug)
+            # 这里将 real_id 传递给你的各平台内容获取方法
+            # 示例：self.biliContent(tid, pg, filter, extend, vdata, real_id)
+        
+        # 路由分发
+        if 'bili' in tid:
+            return self.biliContent(tid, pg, filter, extend, vdata)
+        elif 'huya' in tid:
+            return self.huyaContent(tid, pg, filter, extend, vdata)
+        elif 'douyu' in tid:
+            return self.douyuContent(tid, pg, filter, extend, vdata)
+        return {'list': [], 'page': pg, 'pagecount': 1}
 
-    headers = [
-        {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 Edg/126.0.0.0"
-        },
-        {"User-Agent": "Dart/3.4 (dart:io)"},
-    ]
+    def playerContent(self, flag, id, vipFlags):
+        """统一播放解析入口"""
+        try:
+            ids = id.split('@@')
+            if ids[0] == 'bili':
+                return {'parse': 0, 'url': self.biliplay(ids), 'header': self.playheaders.get('bili')}
+            elif ids[0] == 'huya':
+                return {'parse': 0, 'url': self.huyaplay(ids), 'header': self.playheaders.get('huya')}
+            elif ids[0] == 'douyu':
+                return {'parse': 0, 'url': self.douyuplay(ids), 'header': self.playheaders.get('douyu')}
+        except Exception:
+            return {'parse': 1, 'url': self.excepturl}
 
-    excepturl = "https://www.baidu.com"
-    hosts = {
-        "huya": ["https://www.huya.com", "https://mp.huya.com"],
-        "douyu": "https://www.douyu.com",
-        "wangyi": "https://cc.163.com",
-        "bili": [
-            "https://api.live.bilibili.com",
-            "https://api.bilibili.com",
-        ],
-    }
-    referers = {
-        "huya": "https://live.cdn.huya.com",
-        "douyu": "https://m.douyu.com",
-        "bili": "https://live.bilibili.com",
-    }
-    playheaders = {
-        "wangyi": {
-            "User-Agent": "ExoPlayer",
-            "Connection": "Keep-Alive",
-            "Icy-MetaData": "1",
-        },
-        "bili": {
-            "Accept": "*/*",
-            "Icy-MetaData": "1",
-            "referer": "https://live.bilibili.com",
-            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
-        },
-        "huya": {
-            "User-Agent": "ExoPlayer",
-            "Connection": "Keep-Alive",
-            "Icy-MetaData": "1",
-        },
-        "douyu": {"User-Agent": "libmpv", "Icy-MetaData": "1"},
-    }
+    # --- 工具方法 ---
+    def e64(self, text):
+        return b64encode(text.encode('utf-8')).decode('utf-8')
+
+    def d64(self, encoded_text):
+        return b64decode(encoded_text.encode('utf-8')).decode('utf-8')
+    
+    # 保持原有各平台 Content 及 Detail 方法不变...
 
     MIXIN_KEY_ENC_TAB = [
         46,

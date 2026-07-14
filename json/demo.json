@@ -363,6 +363,18 @@
 			"api": "csp_TingBook"
 		},
 		{
+			"key": "Live",
+			"name": "🚑 LIVE",
+			"type": 3,
+			"api": "./Live.py",
+			"searchable": 0,
+			"quickSearch": 0,
+			"style": {
+				"type": "rect",
+				"ratio": 3.8
+			}
+		},
+		{
 			"key": "Aid",
 			"name": "🚑 急救┃知识",
 			"type": 3,

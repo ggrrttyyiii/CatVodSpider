@@ -334,7 +334,7 @@
 			"timeout": 12,
 			"searchable": 1,
 			"quickSearch": 0,
-			"api": "csp_Gz360"
+			"api": "https://wget.la/https://raw.githubusercontent.com/PizazzGY/NewTVBox/main/movie/py/GZYS.py"
 		},
 		{
 			"key": "csp_Jpys",

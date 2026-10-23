@@ -1,5 +1,1 @@
-# CatVodSpider
-
-### Based on CatVod
-
-https://github.com/CatVodTVOfficial/CatVodTVSpider
+傻狗别来偷你爹了！ 仅限影视用！ 其他去tg哥哥群留言我开授权！

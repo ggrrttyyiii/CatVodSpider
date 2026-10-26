@@ -15,7 +15,7 @@
     "sites": [
         {
             "key": "douban",
-            "name": "🎬豆瓣┃推荐页",
+            "name": "🎬豆瓣┃推荐",
             "type": 3,
             "api": "csp_Douban",
             "searchable": 0,
@@ -36,29 +36,33 @@
         },
         {
             "key": "HJZhenCai",
-            "name": "🍎花卷┃高峰不卡*网盘4K",
+            "name": "🍎花卷┃网盘4K",
             "type": 3,
             "api": "csp_HJZhenCai",
             "searchable": 1,
             "quickSearch": 1,
-            "filterable": 1,
+            "filterable": 0,
             "ext": {
-                 "site_urls":["https://www.hjzhencai.top","https://www.huanjuanwp.shop","https://www.aihuajuan.top"]}
+                "site_urls": [
+                    "https://www.hjzhencai.top",
+                    "https://www.huanjuanwp.shop",
+                    "https://www.aihuajuan.top"
+                ],
                 "danmu": true,
                 "danmu_api": "https://dm.211.li/nonay"
             }
         },
         {
-			"key": "csp_Wogg",
-			"name": "🧸玩偶┃高峰不卡*网盘4K",
-			"type": 3,
-			"api": "csp_Gege",
-			"timeout": 15,
-			"changeable": "0",
-			"quickSearch": 1,
-			"filterable": 1,
-			"ext": "ewogICJzaXRlX3VybHMiOiBbCiAgICAiaHR0cHM6Ly93d3cud29nZy5saXZlIiwKICAgICJodHRwczovL3dvZ2dwYW4uMzMzMjMyLnh5ei8iLAogICAgImh0dHBzOi8vd3d3LndvZ2cubmV0IgogIF0sCiAgInRva2VuIjogIiIsCiAgInVjQ29va2llIjogIiIsCiAgInF1YXJrQ29va2llIjogIiIKfQ=="
-		},
+            "key": "csp_Wogg",
+            "name": "🧸玩偶┃网盘4K",
+            "type": 3,
+            "api": "csp_Gege",
+            "timeout": 15,
+            "changeable": 0,
+            "quickSearch": 1,
+            "filterable": 1,
+            "ext": "ewogICJzaXRlX3VybHMiOiBbCiAgICAiaHR0cHM6Ly93d3cud29nZy5saXZlIiwKICAgICJodHRwczovL3dvZ2dwYW4uMzMzMjMyLnh5ei8iLAogICAgImh0dHBzOi8vd3d3LndvZ2cubmV0IgogIF0sCiAgInRva2VuIjogIiIsCiAgInVjQ29va2llIjogIiIsCiAgInF1YXJrQ29va2llIjogIiIKfQ=="
+        },
         {
             "key": "JuXiaFan",
             "name": "🍚下饭┃1080P",
@@ -327,11 +331,11 @@
                 "danmu_api": "https://dm.211.li/nonay"
             }
         },
-      {
+        {
             "key": "瓜子体育",
-            "name": "⚽瓜子┃看球",
+            "name": "⚽瓜子┃体育",
             "type": 3,
-            "api": "csp_GguaZiTY",
+            "api": "csp_GuaziTY",
             "searchable": 0,
             "quickSearch": 0,
             "filterable": 1,
@@ -349,7 +353,7 @@
         },
         {
             "key": "Kanqiu",
-            "name": "⚽叭叭┃看球",
+            "name": "⚽叭叭┃体育",
             "type": 3,
             "api": "csp_KanQiu",
             "searchable": 0,
@@ -369,7 +373,7 @@
         },
         {
             "key": "Bili",
-            "name": "📺哔哩┃哔哩",
+            "name": "📺哔哩┃番剧",
             "type": 3,
             "api": "csp_Bili",
             "searchable": 1,
@@ -472,7 +476,7 @@
             "api": "csp_Jianpian",
             "searchable": 1,
             "quickSearch": 0,
-            "changeable": "0",
+            "changeable": 0,
             "timeout": 15,
             "ext": {
                 "site": "https://api.ztcgi.com",
@@ -485,15 +489,14 @@
             }
         },
         {
-   "key": "tingshijie",
-   "name": "🎧听书┃世界",
-   "type": 3,
-   "api": "csp_TingShiJie",
-   "jar": "http://192.168.9.107:8899/custom_spider.jar?v=e279342bcaba5252eb74b0d0b64f523d",
-   "searchable": 1,
-   "quickSearch": 1,
-   "filterable": 0
-  },
+            "key": "tingshijie",
+            "name": "🎧听书┃有声",
+            "type": 3,
+            "api": "csp_TingShiJie",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 0
+        },
         {
             "key": "qishui",
             "name": "🥤汽水┃音乐",

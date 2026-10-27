@@ -1,5 +1,5 @@
 {
-    "spider": "https://cdn.waimaimingtang.com/file/images/bwc/20261026180345-8e2c5a3983.jar;md5;e279342bcaba5252eb74b0d0b64f523d",
+    "spider": "https://cdn.waimaimingtang.com/file/images/bwc/20261027183321-94fa4f22f7.jar;md5;7bd65dffc24f9aac358e9007a3d403c6",
     "wallpaper": "https://www.yumus.cn/api/?brand=bing&ua=pc",
     "lives": [
         {
@@ -15,7 +15,7 @@
     "sites": [
         {
             "key": "douban",
-            "name": "🎬豆瓣┃推荐 反馈群：https://t.me/diaosikaifei",
+            "name": "🎬豆瓣┃推荐修红果 反馈群：https://t.me/diaosikaifei",
             "type": 3,
             "api": "csp_Douban",
             "searchable": 0,

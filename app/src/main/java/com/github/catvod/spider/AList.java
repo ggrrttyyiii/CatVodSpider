@@ -158,9 +158,11 @@ public class AList extends Spider {
     private static Map<String, String> getPlayHeader(String url) {
         try {
             Uri uri = Uri.parse(url);
+            String host = uri.getHost() == null ? "" : uri.getHost();
             Map<String, String> header = new HashMap<>();
-            if (uri.getHost().contains("115")) header.put("User-Agent", Util.CHROME);
-            if (uri.getHost().contains("baidupcs.com")) header.put("User-Agent", "pan.baidu.com");
+            if (host.contains("115")) header.put("User-Agent", Util.CHROME);
+            // 百度網盤 CDN 有 baidupcs.com 與 pcs.baidu.com 兩套域名，舊邏輯漏了後者
+            if (host.contains("baidupcs.com") || host.contains("pcs.baidu.com")) header.put("User-Agent", "pan.baidu.com");
             return header;
         } catch (Exception e) {
             return new HashMap<>();

@@ -15,7 +15,10 @@ public class Util {
 
     public static final Pattern THUNDER = Pattern.compile("(magnet|thunder|ed2k):.*");
     public static final String CHROME = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36";
-    public static final List<String> MEDIA = Arrays.asList("mp4", "mkv", "mov", "wav", "wma", "wmv", "flv", "avi", "iso", "mpg", "ts", "mp3", "aac", "flac", "m4a", "ape", "ogg", "rm", "rmvb", "asf", "dts", "dsf", "dff");
+    public static final List<String> MEDIA = Arrays.asList(
+            "mp4", "mkv", "mov", "wmv", "flv", "avi", "iso", "mpg", "ts", "m2ts", "mts", "vob", "webm", "m4v", "3gp",
+            "mp3", "wav", "wma", "aac", "flac", "m4a", "m4b", "ape", "ogg", "oga", "opus", "mka", "aif", "aiff", "wv", "tak", "amr", "rm", "rmvb", "asf", "dts", "dsf", "dff"
+    );
     public static final List<String> SUB = Arrays.asList("srt", "ass", "ssa", "vtt");
 
     public static boolean isThunder(String url) {

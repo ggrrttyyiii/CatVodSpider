@@ -98,14 +98,22 @@ public class Item {
         return getType() == 1;
     }
 
+    private boolean forceMedia() {
+        return getName().endsWith(".ts") || getName().endsWith(".mpg");
+    }
+
     public boolean isMedia(boolean isNew) {
-        if (getName().endsWith(".ts") || getName().endsWith(".mpg")) return true;
+        if (forceMedia()) return true;
+        // 后缀兜底：部分驅動（百度網盤等）回傳的 type 不準，mp3 等音頻會被判為 unknown
+        if (!isFolder() && Util.isMedia(getName())) return true;
         if (isNew) return getType() == 2 || getType() == 3;
         return getType() == 3 || getType() == 4;
     }
 
     public boolean ignore(boolean isNew) {
-        if (getName().endsWith(".ts") || getName().endsWith(".mpg")) return false;
+        if (forceMedia()) return false;
+        // 後綴是媒體就永不過濾，避免被服務端 type 誤判而從列表消失
+        if (!isFolder() && Util.isMedia(getName())) return false;
         if (isNew) return getType() == 0 || getType() == 4;
         return getType() == 0 || getType() == 2 || getType() == 5;
     }

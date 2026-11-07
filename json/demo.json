@@ -29,7 +29,7 @@
     },
    {
       "key": "config",
-      "name": "🔧网盘┃授权",
+      "name": "🔧网盘┃授权扫码",
       "type": 3,
       "api": "csp_PanConfig",
       "searchable": 0,
@@ -83,7 +83,7 @@
     },
      {
       "key": "咖啡·短剧",
-      "name": "☕️咖啡┃短剧",
+      "name": "☕️咖啡┃秒播短剧",
       "type": 3,
       "api": "csp_KaFeiDJ",
       "searchable": 1,

@@ -27,12 +27,15 @@
         "danmu_api": "https://dm.211.li/nonay"
       }
     },
-    {
+   {
       "key": "config",
-      "name": "🔧网盘┃设置",
+      "name": "🔧网盘┃授权",
       "type": 3,
-      "api": "csp_Config",
-      "searchable": 0
+      "api": "csp_PanConfig",
+      "searchable": 0,
+      "ext": {
+        "danmu": true
+      }
     },
     {
       "key": "HJZhenCai",

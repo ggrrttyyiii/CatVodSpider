@@ -251,7 +251,8 @@
         "danmu": true,
         "danmu_api": "https://dm.211.li/nonay"
       }
-     {
+    },
+    {
       "key": "ShanJu",
       "name": "⚡闪剧┃影视",
       "type": 3,

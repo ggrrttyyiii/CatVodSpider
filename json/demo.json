@@ -265,20 +265,16 @@
         "danmu": true,
         "danmu_api": "https://dm.211.li/nonay"
       }
-    },
-    {
-      "key": "Wwys",
-      "name": "🌾农民┃影视",
+     {
+      "key": "ShanJu",
+      "name": "⚡闪剧┃影视",
       "type": 3,
-      "api": "csp_Wwys",
+      "api": "csp_ShanJu",
       "searchable": 1,
       "quickSearch": 1,
-      "timeout": 12,
-      "ext": {
-        "site": "https://vip.wwgz.cn:5200",
-        "danmu": true,
-        "danmu_api": "https://dm.211.li/nonay"
-      }
+      "filterable": 0,
+      "timeout": 15,
+      "ext": {}
     },
     {
       "key": "Gz360",
@@ -344,8 +340,8 @@
       "quickSearch": 1,
       "filterable": 1,
       "ext": {
-        "username": "nimasile",
-        "password": "xiaomi888",
+        "username": "",
+        "password": "",
         "danmu": true,
         "danmu_api": "https://dm.211.li/nonay"
       }
@@ -364,6 +360,17 @@
         "danmu": true,
         "danmu_api": "https://dm.211.li/nonay"
       }
+    },
+     {
+      "key": "Shipu",
+      "name": "🥘AI漫剧┃漫剧",
+      "type": 3,
+      "api": "csp_Shipu",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "timeout": 15,
+      "ext": {}
     },
     {
       "key": "直播",

@@ -240,20 +240,6 @@
       "filterable": 1
     },
     {
-      "key": "JpysWorld",
-      "name": "🌏海外┃影视",
-      "type": 3,
-      "api": "csp_Jpys",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": {
-        "site": "https://yvyeigh.com",
-        "danmu": true,
-        "danmu_api": "https://dm.211.li/nonay"
-      }
-    },
-    {
       "key": "Gulu",
       "name": "🌀咕噜┃影视",
       "type": 3,

@@ -1,5 +1,5 @@
 {
-  "spider": "https://cac.opple.com/yc-media/getFile?id=b0aa3bb25ebd4b25b69d68a7f7989abd#.png;md5;1fee4ded56ae7777b28d8e9fa26d1f78",
+  "spider": "https://zl.wpscdn.cn/2026/11/21/space_img/af87d8a5-93ea-4252-b9b8-ce9a86c5b7bd.png;md5;94b2c802ad4dec79ac3f358c033464c8",
   "wallpaper": "https://www.yumus.cn/api/?brand=360&type=0",
   "lives": [
     {
@@ -66,7 +66,19 @@
       "changeable": 0,
       "ext": "ewogICJzaXRlX3VybHMiOiBbCiAgICAiaHR0cHM6Ly93d3cud29nZy5saXZlIiwKICAgICJodHRwczovL3dvZ2dwYW4uMzMzMjMyLnh5ei8iLAogICAgImh0dHBzOi8vd3d3LndvZ2cubmV0IgogIF0sCiAgInRva2VuIjogIiIsCiAgInVjQ29va2llIjogIiIsCiAgInF1YXJrQ29va2llIjogIiIKfQ=="
     },
-   
+   {
+      "key": "红果·短剧",
+      "name": "🍒红果┃短剧",
+      "type": 3,
+      "api": "csp_HongGuo",
+      "searchable": 1,
+      "quickSearch": 0,
+      "filterable": 1,
+      "ext": {
+        "danmu": true,
+        "danmu_api": "https://dm.211.li/nonay"
+      }
+    },
     {
       "key": "华数",
       "name": "🍒咖啡┃老剧",

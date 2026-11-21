@@ -346,17 +346,6 @@
         "danmu_api": "https://dm.211.li/nonay"
       }
     },
-     {
-      "key": "Shipu",
-      "name": "🥘AI漫剧┃漫剧",
-      "type": 3,
-      "api": "csp_Shipu",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "timeout": 15,
-      "ext": {}
-    },
     {
       "key": "直播",
       "name": "📺电视┃直播",
